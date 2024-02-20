@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { colors } from '../../styles'
+import { breakpoints, colors } from '../../styles'
 
 export const Items = styled.ul`
   display: flex;
@@ -102,5 +102,13 @@ export const ModalContent = styled.div`
   iframe {
     width: 100%;
     height: 480px;
+
+    @media (max-width: ${breakpoints.tablet}) {
+      height: auto;
+    }
+  }
+
+  @media (max-width: ${breakpoints.tablet}) {
+    max-width: 80%;
   }
 `
